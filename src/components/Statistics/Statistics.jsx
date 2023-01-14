@@ -1,5 +1,12 @@
 import {Option} from './Statistics.styled'
 
+// onLeaveFeedback = () => {
+//   this.setState(prevState => ({
+//             value: prevState.value + 1,
+//         }));
+//   }
+
+
 export const Statistics = ({good, neutral, bad, total}) => (
     <div>
         <Option>Good: {good}</Option>

@@ -14,11 +14,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  // onLeaveFeedback = () => {
-  // this.setState(prevState => ({
-  //           value: prevState.value + 1,
-  //       }));
-  // }
+  // 
   // countTotalFeedback = () => {
   //     
       

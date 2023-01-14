@@ -12,4 +12,5 @@ border: 1px solid green;
 background-color: lightblue;
 width: 100px;
 height: 35px;
+font-weight: 600;
 `
