@@ -6,6 +6,6 @@ export const Statistics = ({good, neutral, bad, total}) => (
         <Option>Neutral: {neutral} </Option>
         <Option>Bad: {bad} </Option>
         <Option>Total: {total} </Option>
-        {/* <Option>Bad: {total} </Option> */}
+        <Option>Bad: </Option>
     </div>
 )
