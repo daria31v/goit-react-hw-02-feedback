@@ -9,8 +9,8 @@ import { FeedbackOptionsVariants, FeedbackBtn } from './FeedbackOptions.styled'
 
 export const FeedbackOptions = () => (
     <FeedbackOptionsVariants>
-        <FeedbackBtn onClick>Good</FeedbackBtn>
-        <FeedbackBtn>Neutral</FeedbackBtn>
-        <FeedbackBtn>Bad</FeedbackBtn>
+        <FeedbackBtn onClick={evt => { console.log("Good!", evt) }}>Good</FeedbackBtn>
+        <FeedbackBtn onClick={evt => { console.log("Neutral", evt) }}>Neutral</FeedbackBtn>
+        <FeedbackBtn onClick={evt => { console.log("Bad", evt) }}>Bad</FeedbackBtn>
     </FeedbackOptionsVariants>
 );
