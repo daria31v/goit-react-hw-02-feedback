@@ -1,6 +1,20 @@
-// import {} from './Section.styled'
+import PropTypes from 'prop-types'
 
-// import { FeedbackOptions } from "components/FeedbackOptions/FeedbackOptions";
-// import { Statistics } from "components/Statistics/Statistics";
+import {Title} from './Section.styled'
 
+export const Section = ({title, children}) => {
+    return (
+        <>
+        <Title> {title}</Title>
+        {children}
+        </>
+   )
+}
 
+Section.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element.isRequired
+  ]),
+  title: PropTypes.string.isRequired,
+}
