@@ -1,5 +1,5 @@
 import { Option } from './Statistics.styled';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { Notification } from 'components/Statistics/Notification';
 
 export const Statistics = ({
