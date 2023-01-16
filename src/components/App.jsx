@@ -7,7 +7,8 @@ import { Component } from 'react';
 export class App extends Component {
   static defaultProps = {};
   static propTypes = {};
-
+   
+  
   state = {
     good: 5,
     neutral: 0,
@@ -15,11 +16,26 @@ export class App extends Component {
   };
   
 
-  leaveFeedback = ([good, neutral, bad]) => {
-    return this.setState(prevState => ({ [good]: prevState.value + 1 }, 
-      { [neutral]: prevState[neutral] + 1 },
-      { [bad]: prevState[bad] + 1 }));
+
+  leaveFeedback = name => {
+    // console.log(this.state.good, 'HELLO')
+    this.setState(prevState => ({
+      [name]: prevState[name] + 1,
+    //     // good: prevState.value + 1,
+    //     // neutral: prevState.value + 1,
+    //     // bad: prevState.value + 1 
+      
+    }));
   };
+
+  // addFeedback = feedback => {
+  //   this.setState(prevState => ({ [feedback]: prevState[feedback] + 1 }));
+  // };
+// leaveFeedback = name => {
+//     this.setState(prevState => ({
+//       [name]: prevState[name] + 1,
+//     }));
+//   };
 
   //
   countTotalFeedback = ({ good, neutral, bad }) => {
@@ -33,7 +49,7 @@ export class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state);
-    console.log(good, neutral, bad)
+    // console.log(good, neutral, bad)
     // console.log(options);
 
     return (
@@ -52,8 +68,8 @@ export class App extends Component {
           good={good}
           neutral={neutral}
           bad={bad}
-          total={this.countTotalFeedback}
-          positivePercentage={this.countPositiveFeedbackPercentage}
+          // total={this.countTotalFeedback}
+          // positivePercentage={this.countPositiveFeedbackPercentage}
         />
         {/* </Section> */}
       </BoxFeedbackOptions>

@@ -7,12 +7,12 @@ import {Option} from './Statistics.styled'
 //   }
 
 
-export const Statistics = ({good, neutral, bad, total}) => (
+export const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
     <div>
         <Option>Good: {good}</Option>
         <Option>Neutral: {neutral} </Option>
         <Option>Bad: {bad} </Option>
         <Option>Total: {total} </Option>
-        <Option>Positive feedback: </Option>
+        <Option>Positive feedback: {positivePercentage} </Option>
     </div>
 )
