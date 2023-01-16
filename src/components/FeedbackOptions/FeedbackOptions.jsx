@@ -1,16 +1,21 @@
 import { FeedbackOptionsVariants, FeedbackBtn } from './FeedbackOptions.styled'
 
-// onLeaveFeedback = () => {
-//   this.setState(prevState => ({
-//             value: prevState.value + 1,
-//         }));
-//   }
+// 
 
 
-export const FeedbackOptions = () => (
-    <FeedbackOptionsVariants>
-        <FeedbackBtn onClick={evt => { console.log("Good!", evt) }}>Good</FeedbackBtn>
-        <FeedbackBtn onClick={evt => { console.log("Neutral", evt) }}>Neutral</FeedbackBtn>
-        <FeedbackBtn onClick={evt => { console.log("Bad", evt) }}>Bad</FeedbackBtn>
-    </FeedbackOptionsVariants>
-);
+export const FeedbackOptions = ({ options }, onLeaveFeedback) => {
+    // const options = {good, neutral, bad}
+    return (
+        <FeedbackOptionsVariants>
+            {options.map(option => {
+                return (
+                    <FeedbackBtn onClick={()=> onLeaveFeedback()}>{option}</FeedbackBtn>
+                )
+            })}
+            
+            {/* <FeedbackBtn onClick={leaveFeedback}>Neutral</FeedbackBtn>
+            <FeedbackBtn onClick={leaveFeedback}>Bad</FeedbackBtn> */}
+        </FeedbackOptionsVariants>
+    )
+    
+};
