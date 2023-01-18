@@ -1,5 +1,5 @@
 import { Option } from './Statistics.styled';
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Notification } from 'components/Statistics/Notification';
 
 export const Statistics = ({
@@ -24,10 +24,10 @@ export const Statistics = ({
   </div>
 );
 
-// Statistics.propTypes = {
-//   good: PropTypes.number.isRequired,
-//   neutral: PropTypes.number.isRequired,
-//   bad: PropTypes.number.isRequired,
-//   total: PropTypes.func.isRequired,
-//   positivePercentage: PropTypes.func.isRequired,
-// }
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+}

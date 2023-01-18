@@ -62,7 +62,3 @@ export class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   total: PropTypes.func.isRequired,
-//   positivePercentage: PropTypes.func.isRequired,
-// }
